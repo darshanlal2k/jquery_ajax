@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json country state dropdown </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    #stateName {
+        display: none;
+    }
+
+    table {
+        background-color: #deffec;
+        width: 100%;
+    }
+
+    select {
+        background-color: blue;
+        color: white;
+        border: 1px solid blue;
+        border-radius: 3px;
+        font-weight: bolder;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    #universityCounts {
+        font-size: 20px;
+
+    }
+</style>
+
+<body>
+    <div style="display: flex;">
+        <select name="countryName" id="countryName" onchange="chooseCountry(event)">
+            <option hidden value="">Select Your Country</option>
+            <option value="india">India</option>
+            <option value="United+Kingdom">United Kingdom</option>
+            <option value="United+States">United States</option>
+        </select>
+        <select id="stateName">
+            <!-- <option hidden="">Select Your State</option> -->
+        </select>
+    </div>
+    <p id="universityCounts"></p>
+    <p id="showTable"></p>
+    <script src="/select_country_universities/script.js"></script>
+</body>
+
+</html>
