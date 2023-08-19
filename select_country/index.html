@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Country</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<style>
+    table,th,td{
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <select name="countryName" id="countryName" onchange="checkname(event)">
+        <option hidden value=""></option>
+        <option value="india">India</option>
+        <option value="United+Kingdom">United Kingdom</option>
+        <option value="United+States">United States</option>
+    </select>
+    <p id="container"></p>
+    <script src="/select_country/script.js"></script>
+</body>
+
+</html>
