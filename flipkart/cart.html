@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - Cart</title>
+    <link rel="stylesheet" href="../json-ajax-flipkart-task/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../json-ajax-flipkart-task/bootstrap/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="../json-ajax-flipkart-task/css/style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    body {
+        font-size: 14px;
+        background-color: #f1f3f6;
+        color: #212121;
+        line-height: 1.4;
+    }
+
+    #asdf {
+        padding: 0px 0px 0px 16px;
+    }
+
+    .productCartDetails {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* .widthDetails {
+        width: 80%;
+        margin: 0 auto;
+    } */
+
+    .minusPlusClr {
+        color: #c2c2c2;
+
+    }
+
+    .minusPlustBorderClr {
+        border-color: 2px solid #e0e0e0;
+    }
+
+    #buttonTesting {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #minus {
+        padding: 5px;
+        background-color: bisque;
+        border-radius: 50%;
+    }
+
+    #orderCount {
+        padding: 5px;
+        background-color: bisque;
+        /* border-radius: 50%; */
+    }
+
+    #plus {
+        padding: 5px;
+        background-color: bisque;
+        border-radius: 50%;
+    }
+
+    .placeorder {
+        width: 100%;
+        box-shadow: 0px -1px 0px 0px black;
+    }
+
+    .finding {
+        width: 30%;
+        float: right;
+        background-color: #fb641b;
+
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="productCartDetails mt-4">
+                <div class="col-8 ">
+                    <div class="row bg-white">
+                        <div class="col-6 p-3">
+                            <!-- <div class="row"> -->
+                            <div>Deliver to <b>Username, 627002 </b> <button class="btn">HOME</button> </div>
+                            <div>27/9, North Medu Street, Veeravanallur, Veeravanallur </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="col-6 text-end p-4 mt-2">
+                            <button type="button"
+                                class="btn text-primary bg-white border border-1 border-dark">Change</button>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="bg-white row p-3">
+                                <div class="col-2 p-4">
+                                    <img src="../json-ajax-flipkart-task/images/image7-700x374.png" width="100px"
+                                        height="100px">
+                                </div>
+                                <div class="col-6">
+                                    <div class="row p-4">
+                                        <div class="fs-5">product name</div>
+                                        <div class="row p-3">
+                                            <div class="col-6 fw-bold fs-5">857488</div>
+                                            <div class="col-6 text-success mt-2 fw-bold">99% off</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 p-4">Delivery by Wed Feb 15 | Free</div>
+                                <div class="row ">
+                                    <div class="col-2">
+                                        <div class="row">
+                                            <div id="buttonTesting">
+                                                <div id="minus minusPlustBorderClr" class="fw-bold">-</div>
+                                                <div id="orderCount minusPlustBorderClr" class="fw-bold">2</div>
+                                                <div id="plus minusPlustBorderClr" class="fw-bold">+</div>
+                                            </div>
+                                            <!-- <div class="col-2 bg-info rounded-circle p-1  ms-2 mt-2">
+                                                <div class="  fw-bold  text-center ">-</div>
+                                            </div>
+                                            <div class="col-4 border border-light text-center ms-2  p-2">2</div>
+                                            <div class="col-2 bg-info rounded-circle p-1  ms-2 mt-2 ">
+                                                <div class="    fw-bold  text-center">+</div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-3  fw-bolder fs-6 text-start">SAVE FOR LATER</div>
+                                    <div class="col-2 fs-6  fw-bolder">REMOVE</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- <div class=" bg-white">
+                                        fasd
+                                    </div> -->
+                    </div>
+                    <div class="row  bg-white placeorderRow">
+
+                        <div class="placeorder p-3">
+                            <div class="finding p-3 text-center text-white fw-bold">
+
+                                PLACE ORDER </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class=" col-3 bg-white asdf">
+                    <div class="p-4">
+                        <div class="fs-5">
+                            PRICE DETAILS
+                        </div>
+                        <div>
+                            <hr>
+                        </div>
+                        <div class="row fs-6 mt-2">
+                            <div class="col-6">Price (1 item)</div>
+                            <div class="col-6 text-end">$1,11,111</div>
+                        </div>
+                        <div class="row fs-6 mt-2">
+                            <div class="col-6">Discount</div>
+                            <div class="col-6 text-end text-success fw-bold">-$1,11,111</div>
+                        </div>
+                        <div class="row fs-6 mt-2">
+                            <div class="col-6">Delivery Charges</div>
+                            <div class="col-6 text-end text-success fw-bold">free</div>
+                        </div>
+                        <div>
+                            <hr>
+                        </div>
+                        <div class="row fs-6 mt-2">
+                            <div class="col-6">Total Amount</div>
+                            <div class="col-6 text-end fw-bold fw-bold">$90,999</div>
+                        </div>
+                        <div>
+                            <hr>
+                        </div>
+                        <div class="fs-6 mt-2 text-success fw-bold">You will save ₹38,991 on this order
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../json-ajax-flipkart-task/cart.js"></script>
+</body>
+
+</html>
